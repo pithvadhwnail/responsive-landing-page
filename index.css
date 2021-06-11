@@ -1,0 +1,234 @@
+/* ===============
+    COMMON
+   ==============  */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: "Roboto Condensed", sans-serif;
+  background: #201f1f;
+  color: #ebebeb;
+}
+
+a {
+  text-decoration: none;
+}
+
+.image-section > *,
+.content-section > * {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+strong {
+  font-weight: 700;
+  display: block;
+}
+
+/* ===============
+    IMAGE SECTION
+   ==============  */
+
+.image-section {
+  min-height: 50vh;
+  background-image: url(./images/enderman-bg.jpg);
+  background-color: #4a004d;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  padding: 0 0.5em 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.image-section-title {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.image-section-subtitle {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  color: #b600bd;
+  font-weight: 700;
+  /* margin-bottom: 1em; */
+}
+
+.image-section-toptext {
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  order: -1;
+  text-transform: uppercase;
+  border-top: 5px solid #4a004d;
+  border-image: linear-gradient(to right, #5c005f 40%, #390041 70%) 1;
+}
+
+/* ===============
+    CONTENT SECTION
+   ==============  */
+
+.content-section {
+  margin-top: 2.5em;
+}
+
+.content-section-title {
+  font-size: 1.5rem;
+  color: #a430a8;
+}
+
+.content-section-subtitle {
+  text-transform: uppercase;
+  margin-top: 0.1em;
+  margin-bottom: 1.5em;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.content-section-info {
+  margin-bottom: 1.5em;
+  line-height: 1.45;
+  max-width: 800px;
+  width: 80%;
+}
+
+.privacy {
+  font-size: 0.7rem;
+  margin: 2.15em auto;
+}
+
+/* ===============
+    FORM
+   ==============  */
+
+.email-collector {
+  width: 80%;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+input,
+.btn {
+  width: 100%;
+  border-radius: 5px;
+  font-family: inherit;
+  text-align: center;
+}
+
+input {
+  padding: 0.5em;
+  font-size: inherit;
+  background: inherit;
+  color: #a430a8;
+  border: #ebebeb 1px solid;
+  margin-bottom: 0.5em;
+  transition: transform 0.3s;
+  outline: none;
+}
+
+input:focus {
+  transform: scale(1.025);
+}
+
+input::placeholder {
+  color: #aaaaaa;
+}
+
+.btn {
+  padding: 0.75em;
+  display: inline-block;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border: 0;
+  cursor: pointer;
+  outline: none;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background: linear-gradient(to right, #99009e, #300036);
+  background-size: 300%;
+  background-position: center;
+  color: #cccccc;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-position: right;
+  color: #ff00c8;
+  transform: scale(1.025);
+}
+
+.user-email {
+  color: #a430a8;
+}
+
+.user-name {
+  color: #ebebeb;
+}
+
+/* ===============
+    MEDIA QUERIES
+   ==============  */
+
+@media (min-width: 900px) {
+  body {
+    flex-direction: row;
+  }
+
+  .image-section-toptext {
+    font-size: 0.8rem;
+  }
+
+  .image-section-title {
+    font-size: 3rem;
+  }
+
+  .image-section-subtitle {
+    font-size: 1.75rem;
+  }
+
+  .content-section {
+    margin: 0;
+  }
+
+  .content-section-title {
+    font-size: 2rem;
+  }
+
+  .content-section-info {
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+  }
+
+  .privacy {
+    font-size: 0.8rem;
+    margin-bottom: 0;
+  }
+
+  .image-section,
+  .content-section {
+    min-height: 100vh;
+    width: 50%;
+  }
+
+  .content-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
