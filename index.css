@@ -71,6 +71,7 @@ strong {
   text-transform: uppercase;
   border-top: 5px solid #4a004d;
   border-image: linear-gradient(to right, #5c005f 40%, #390041 70%) 1;
+  border-width: 6px 0 0 0;
 }
 
 /* ===============
